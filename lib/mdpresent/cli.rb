@@ -3,6 +3,7 @@ require 'mdpresent'
 
 module Mdpresent
   class CLI < Thor
+
     desc "new", "create a new project for presentations"
     def new(dir_name)
       begin
@@ -14,6 +15,11 @@ module Mdpresent
       rescue
         puts $!, $@
       end
+    end
+
+    desc "heroku", "setup a heroku repo"
+    def heroku
+      
     end
   end
 end
