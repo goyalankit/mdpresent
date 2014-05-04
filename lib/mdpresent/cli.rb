@@ -3,10 +3,6 @@ require 'mdpresent'
 
 module Mdpresent
   class CLI < Thor
-    def self.exit_on_failure?
-      true
-    end
-
     desc "new", "create a new project for presentations"
     def new(dir_name)
       begin
