@@ -1,5 +1,9 @@
 require "mdpresent/version"
 
 module Mdpresent
-  # nothing fancy here
+
+  # get the root of gem
+  def self.root
+    File.expand_path '../..', __FILE__
+  end
 end
