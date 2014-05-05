@@ -1,6 +1,12 @@
 require "mdpresent/version"
+require "mdpresent/command"
+require "mdpresent/heroku"
+require "config"
 
 module Mdpresent
+
+  # globals
+  PLATFORMS = [ "heroku" ]
 
   # get the root of gem
   def self.root

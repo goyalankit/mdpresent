@@ -1,0 +1,13 @@
+---
+en:
+    platform_not_supported: platform %{platform} not supported yet.
+    install_heroku_toolbelt: heroku toolbelt not found. please install from https://toolbelt.heroku.com/
+    heroku_login_failed: login to heroku failed. please try again.
+    heroku_create_failed: heroku create failed. please try again.
+    commands:
+      heroku:
+        login: heroku login
+        create: heroku create
+      mdpress:
+        mdpress: mdpress %{args}
+        gen: mdpress %{file}
