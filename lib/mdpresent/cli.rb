@@ -27,5 +27,27 @@ module Mdpresent
     def generate file
       Command.generate_presentation file
     end
+
+    desc "update_home", "update the home page with new presentations"
+    def update_home
+      home_page_generator = HomePageGenerator.new
+      home_page_generator.generate
+    end
+
+    desc "open", "open app in browser"
+    def open
+      case Mdpresent.platform
+      when :heroku
+        Heroku.open
+      end
+    end
+
+    desc "deploy", "deploy app to production"
+    def deploy
+      case Mdpresent.platform
+      when :heroku
+        Heroku.deploy
+      end
+    end
   end
 end

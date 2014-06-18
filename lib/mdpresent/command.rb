@@ -1,5 +1,8 @@
 module Mdpresent
   class Command
+
+    require "shellwords"
+
     class << self
       def path cmd
         exts = ENV['PATHEXT'] ? ENV['PATHEXT'].split(';') : ['']
@@ -17,6 +20,7 @@ module Mdpresent
       end
 
       def execute cmd
+        Logger.log("[command.execution] executing #{Shellwords.escape(cmd)}")
         system cmd
       end
     end

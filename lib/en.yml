@@ -8,6 +8,19 @@ en:
       heroku:
         login: heroku login
         create: heroku create
+        deploy: git push heroku master
+        open: heroku open
+      git:
+        status: git status
+        init: git init
+        which: which git
+        heroku_remote: git remote | grep heroku
       mdpress:
         mdpress: mdpress %{args}
         gen: mdpress %{file}
+    errors:
+      git_init_failed: git init failed!\nPlease make sure `git init` succeeds before continuing
+      git_witch_failed: git is not installed. Please install `git` before continuing
+      heroku_deploy_failed: heroku deploy failed. You could manually try running `git push heroku master` \n\n\nPlease file a bug report with stack trace at http://github.com/goyalankit/mdpresent
+      heroku_open_failed: heroku open failed. You could manually try running `heroku open` \n\n\nPlease file a bug report with stack trace at http://github.com/goyalankit/mdpresent
+

@@ -22,5 +22,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_dependency "thor"
   spec.add_dependency "i18n"
+  spec.add_dependency "erubis"
   spec.add_development_dependency "pry"
 end
