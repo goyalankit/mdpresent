@@ -9,3 +9,7 @@ module I18n
     I18n.translate(key, options)
   end
 end
+
+# use git to get the project root
+PROJECT_ROOT = `git rev-parse --show-toplevel`.strip
+

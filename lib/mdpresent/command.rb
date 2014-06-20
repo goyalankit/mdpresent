@@ -16,7 +16,15 @@ module Mdpresent
       end
 
       def generate_presentation file
-        execute I18n.t "commands.mdpress.gen", { file: file }
+        # get the absolute path of mdfile provided by user.
+        file_with_path = File.expand_path(file)
+
+
+        # run mdpress generate command inside the www dir.
+        # since this is where we want to keep all the generated code.
+        Dir.chdir "#{PROJECT_ROOT}/www"
+
+        execute I18n.t "commands.mdpress.gen", { file: file_with_path }
       end
 
       def execute cmd
@@ -26,3 +34,4 @@ module Mdpresent
     end
   end
 end
+

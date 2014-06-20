@@ -2,19 +2,20 @@
 en:
     platform_not_supported: platform %{platform} not supported yet.
     install_heroku_toolbelt: heroku toolbelt not found. please install from https://toolbelt.heroku.com/
-    heroku_login_failed: login to heroku failed. please try again.
-    heroku_create_failed: heroku create failed. please try again.
     commands:
       heroku:
         login: heroku login
         create: heroku create
         deploy: git push heroku master
         open: heroku open
+      bundle_install: bundle install
       git:
         status: git status
         init: git init
         which: which git
         heroku_remote: git remote | grep heroku
+        initial_add: git add home.erubis www md_files index.php home.html
+        initial_commit: git commit -m 'initial commit %{date_time}'
       mdpress:
         mdpress: mdpress %{args}
         gen: mdpress %{file}
@@ -23,4 +24,6 @@ en:
       git_witch_failed: git is not installed. Please install `git` before continuing
       heroku_deploy_failed: heroku deploy failed. You could manually try running `git push heroku master` \n\n\nPlease file a bug report with stack trace at http://github.com/goyalankit/mdpresent
       heroku_open_failed: heroku open failed. You could manually try running `heroku open` \n\n\nPlease file a bug report with stack trace at http://github.com/goyalankit/mdpresent
+      heroku_login_failed: login to heroku failed. please try again.
+      heroku_create_failed: heroku create failed. please try again.
 

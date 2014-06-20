@@ -21,6 +21,10 @@ module Mdpresent
     def setup platform
       abort I18n.t :platform_not_supported, { platform: platform } unless PLATFORMS.include?(platform.downcase)
       Heroku.setup
+
+      puts "Setting up demo home page..."
+      home_page_generator = HomePageGenerator.new
+      home_page_generator.generate
     end
 
     desc "generate file", "generate file from markdown"

@@ -28,7 +28,7 @@ module Mdpresent
         end
 
         success = Command.execute I18n.t("commands.heroku.login")
-        abort I18n.t("heroku_login_failed") unless success
+        abort I18n.t("errors.heroku_login_failed") unless success
       end
 
       def create
@@ -39,18 +39,21 @@ module Mdpresent
 
         puts "Creating new heroku app..."
         success = Command.execute I18n.t("commands.heroku.create")
-        abort I18n.t("heroku_create_failed") unless success
+        success &&= Command.execute I18n.t("commands..git.initial_add")
+        success &&= Command.execute I18n.t("commands.git.initial_commit", date_time: Time.now)
+        abort I18n.t("errors.heroku_create_failed") unless success
       end
 
       def deploy
         success = Command.execute I18n.t("commands.heroku.deploy")
-        abort I18n.t("heroku_deploy_failed") unless success
+        abort I18n.t("errors.heroku_deploy_failed") unless success
       end
 
       def open
         success = Command.execute I18n.t("commands.heroku.open")
-        abort I18n.t("heroku_open_failed") unless success
+        abort I18n.t("errors.heroku_open_failed") unless success
       end
     end
   end
 end
+
