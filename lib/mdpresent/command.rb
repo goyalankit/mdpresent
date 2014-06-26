@@ -19,10 +19,12 @@ module Mdpresent
         # get the absolute path of mdfile provided by user.
         file_with_path = File.expand_path(file)
 
+        # use git to get the project root
+        project_root = `git rev-parse --show-toplevel`.strip
 
         # run mdpress generate command inside the www dir.
         # since this is where we want to keep all the generated code.
-        Dir.chdir "#{PROJECT_ROOT}/www"
+        Dir.chdir "#{project_root}/www"
 
         execute I18n.t "commands.mdpress.gen", { file: file_with_path }
       end

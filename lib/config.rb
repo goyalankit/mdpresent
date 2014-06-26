@@ -10,6 +10,3 @@ module I18n
   end
 end
 
-# use git to get the project root
-PROJECT_ROOT = `git rev-parse --show-toplevel`.strip
-

@@ -4,6 +4,10 @@ module Mdpresent
     attr_accessor :heroku
 
     class << self
+
+      # check that heroku toolbelt is installed
+      # heroku login - authenticate with heroku
+      # heroku create - create new app and add remote to .git/config
       def setup
         Logger.log("starting the setup...")
         @heroku = Command.path("heroku")
@@ -19,6 +23,7 @@ module Mdpresent
       end
 
       def login
+
         # check if heroku remote is already present.
         # return, since heroku create has already been run
         if Git.heroku_remote_present?
