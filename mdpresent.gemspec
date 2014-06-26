@@ -23,5 +23,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "thor"
   spec.add_dependency "i18n"
   spec.add_dependency "erubis"
+  spec.add_dependency "parseconfig"
+  spec.add_dependency "mdpress"
   spec.add_development_dependency "pry"
 end

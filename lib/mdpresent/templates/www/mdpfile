@@ -1,0 +1,5 @@
+# you can add custom descriptions to your presentation in this file
+#
+# Syntax: dir_name_in_www = "custom description"
+
+demo = "introduction to mdpresent"

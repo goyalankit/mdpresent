@@ -25,7 +25,7 @@ module Mdpresent
         # run mdpress generate command inside the www dir.
         # since this is where we want to keep all the generated code.
         Dir.chdir "#{project_root}/www"
-
+        puts "Generating presentation files..."
         execute I18n.t "commands.mdpress.gen", { file: file_with_path }
       end
 
