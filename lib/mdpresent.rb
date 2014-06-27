@@ -9,7 +9,7 @@ require "config"
 module Mdpresent
 
   # globals
-  PLATFORMS = [ "heroku" ]
+  PLATFORMS = [ "heroku", "guthub" ]
 
   def self.platform
     return :heroku if Git.heroku_remote_present?

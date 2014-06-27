@@ -28,7 +28,6 @@ module Mdpresent
       # go back to home directory
       Dir.chdir("#{project_root}")
 
-
       link_desc = {}
       presentation_dirs.each do |dir_name|
         if custom_desc.keys.include?(dir_name)

@@ -20,8 +20,12 @@ module Mdpresent
     desc "setup heroku", "setup the platform. Currently only \"heroku\" is supported"
     def setup platform
       abort I18n.t :platform_not_supported, { platform: platform } unless PLATFORMS.include?(platform.downcase)
-      Heroku.setup
-
+      case platform.downcase
+      when "heroku"
+        Heroku.setup
+      when "github"
+        Github.setup
+      end
       puts "Setting up demo home page..."
       home_page_generator = HomePageGenerator.new
       home_page_generator.generate
