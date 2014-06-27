@@ -33,6 +33,18 @@ module Mdpresent
       def heroku_remote_present?
         Command.execute I18n.t("commands.git.heroku_remote")
       end
+
+      def origin_remote_present?
+        Command.execute I18n.t("commands.git.origin_remote")
+      end
+
+      def git_add_remote user_name, repo_name
+        Command.execute I18n.t("commands.github.add_remote")
+      end
+
+      def gh_pages_branch_present?
+        Command.execute I18n.t("commands.git.gh_pages_remote")
+      end
     end # end of class << self
 
   end # end of class Git

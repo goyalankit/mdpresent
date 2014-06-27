@@ -14,11 +14,16 @@ en:
         init: git init
         which: which git
         heroku_remote: git remote | grep heroku
+        origin_remote: git remote | grep origin
         initial_add: git add home.erubis www md_files index.php home.html
         initial_commit: git commit -m 'initial commit %{date_time}'
+        gh_pages_remote:  git branch | grep gh-pages
       mdpress:
         mdpress: mdpress %{args}
         gen: mdpress %{file}
+      github:
+        create_gh_pages: git checkout -b gh-pages
+        add_remote: git remote add origin http://github.com/%{user_name}/%{repo_name}
     errors:
       git_init_failed: git init failed!\nPlease make sure `git init` succeeds before continuing
       git_witch_failed: git is not installed. Please install `git` before continuing
