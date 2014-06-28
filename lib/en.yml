@@ -23,6 +23,8 @@ en:
         mdpress: mdpress %{args}
         gen: mdpress %{file}
         watch: mdpress -a %{file}
+        style: mdpress -s %{style} %{file}
+        list: mdpress -l
       github:
         create_gh_pages: git checkout -b gh-pages
         add_remote: git remote add origin http://github.com/%{user_name}/%{repo_name}

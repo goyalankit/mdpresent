@@ -63,5 +63,15 @@ module Mdpresent
     def watch file
       Command.execute I18n.t("commands.mdpress.watch", {file: file})
     end
+
+    desc "style", "apply style to your presentation"
+    def style style, file
+      Command.generate_presentation file, style
+    end
+
+    desc "list", "list all the stylesheets"
+    def list
+      Command.execute I18n.t("commands.mdpress.list")
+    end
   end
 end
