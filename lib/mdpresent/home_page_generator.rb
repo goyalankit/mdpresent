@@ -14,7 +14,7 @@ module Mdpresent
       link_desc_map = get_link_description_map
 
       # generate home.html page
-      File.write('home.html', home_page_eruby.result(:link_desc => link_desc_map))
+      File.write('index.html', home_page_eruby.result(:link_desc => link_desc_map))
     end
 
     def get_link_description_map

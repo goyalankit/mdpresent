@@ -30,7 +30,7 @@ module Mdpresent
       end
 
       def execute cmd
-        Logger.log("[command.execution] executing #{Shellwords.escape(cmd)}")
+        Logger.log("[command.execution] executing #{cmd}")
         system cmd
       end
     end

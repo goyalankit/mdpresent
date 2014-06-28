@@ -44,7 +44,7 @@ module Mdpresent
 
         puts "Creating new heroku app..."
         success = Command.execute I18n.t("commands.heroku.create")
-        success &&= Command.execute I18n.t("commands..git.initial_add")
+        success &&= Command.execute I18n.t("commands.git.initial_add")
         success &&= Command.execute I18n.t("commands.git.initial_commit", date_time: Time.now)
         abort I18n.t("errors.heroku_create_failed") unless success
       end

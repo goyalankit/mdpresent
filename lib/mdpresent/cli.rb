@@ -47,6 +47,8 @@ module Mdpresent
       case Mdpresent.platform
       when :heroku
         Heroku.open
+      when :github
+        Github.open
       end
     end
 
@@ -55,6 +57,8 @@ module Mdpresent
       case Mdpresent.platform
       when :heroku
         Heroku.deploy
+      when :github
+        Github.deploy
       end
     end
   end

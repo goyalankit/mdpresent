@@ -35,14 +35,17 @@ module Mdpresent
       end
 
       def origin_remote_present?
+        puts "Checking if remote present..."
         Command.execute I18n.t("commands.git.origin_remote")
       end
 
       def git_add_remote user_name, repo_name
-        Command.execute I18n.t("commands.github.add_remote")
+        puts "Adding remote..."
+        Command.execute I18n.t("commands.github.add_remote", {user_name: user_name.strip, repo_name: repo_name.strip})
       end
 
       def gh_pages_branch_present?
+        puts "Adding branch for github pages.."
         Command.execute I18n.t("commands.git.gh_pages_remote")
       end
     end # end of class << self
