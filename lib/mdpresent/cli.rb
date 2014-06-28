@@ -30,7 +30,7 @@ module Mdpresent
 
     desc "generate file", "generate file from markdown"
     def generate file
-      Command.generate_presentation file
+      Command.generate_presentation file, {action: :default}
     end
 
     desc "update_home", "update the home page with new presentations"
@@ -61,12 +61,12 @@ module Mdpresent
 
     desc "watch", "auto-update the presentation files"
     def watch file
-      Command.execute I18n.t("commands.mdpress.watch", {file: file})
+      Command.generate_presentation file, {action: :watch}
     end
 
     desc "style", "apply style to your presentation"
     def style style, file
-      Command.generate_presentation file, style
+      Command.generate_presentation file, {action: :style, style: style}
     end
 
     desc "list", "list all the stylesheets"

@@ -15,7 +15,7 @@ module Mdpresent
         return nil
       end
 
-      def generate_presentation file, style=:default
+      def generate_presentation file, options
         # get the absolute path of mdfile provided by user.
         file_with_path = File.expand_path(file)
 
@@ -26,10 +26,13 @@ module Mdpresent
         # since this is where we want to keep all the generated code.
         Dir.chdir "#{project_root}/www"
         puts "Generating presentation files..."
-        if style == :default
+        case options[:action]
+        when :default
           execute I18n.t "commands.mdpress.gen", { file: file_with_path }
-        else
-          execute I18n.t("commands.mdpress.style", {style: style, file: file_with_path})
+        when :style
+          execute I18n.t("commands.mdpress.style", {style: options[:style], file: file_with_path})
+        when :watch
+          execute I18n.t("commands.mdpress.watch", {file: file_with_path})
         end
       end
 
