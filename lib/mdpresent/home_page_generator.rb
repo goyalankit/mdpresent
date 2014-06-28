@@ -6,7 +6,7 @@ module Mdpresent
     def generate
       puts "Generating home page..."
       # file with template variables
-      home_page_input = File.read('home.erubis')
+      home_page_input = File.read('index.erubis')
 
       # create eruby object
       home_page_eruby = Erubis::Eruby.new(home_page_input)

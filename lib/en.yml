@@ -15,7 +15,7 @@ en:
         which: which git
         heroku_remote: git remote | grep heroku
         origin_remote: git remote | grep origin
-        initial_add: git add home.erubis www md_files index.php home.html styles.css
+        initial_add: git add index.erubis www md_files index.php index.html styles.css
         initial_commit: git commit -m 'initial commit %{date_time}'
         gh_pages_remote:  git branch | grep gh-pages
         checkout_master: git checkout master
