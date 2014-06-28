@@ -58,5 +58,10 @@ module Mdpresent
         Github.deploy
       end
     end
+
+    desc "watch", "auto-update the presentation files"
+    def watch file
+      Command.execute I18n.t("commands.mdpress.watch", {file: file})
+    end
   end
 end
