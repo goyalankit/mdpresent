@@ -26,9 +26,6 @@ module Mdpresent
       when "github"
         Github.setup
       end
-      puts "Setting up demo home page..."
-      home_page_generator = HomePageGenerator.new
-      home_page_generator.generate
     end
 
     desc "generate file", "generate file from markdown"
