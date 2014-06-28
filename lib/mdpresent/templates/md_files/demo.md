@@ -60,11 +60,6 @@ touch presentation.md
 ```
  mdpresent gen md_files/presentation.md
 ```
-
----
-
-## continued...
-
 * Add all the files in www/presentation and presentation.md to git*
 
 ```
@@ -72,10 +67,19 @@ touch presentation.md
  git commit -am 'presentation on mdpresent'
 ```
 
+
+---
+
 * deploy your presentation
 
 ```
 mdpresent deploy
+```
+
+* Generate homepage
+
+```
+mdpresent update_home
 ```
 
 * Open the public url
@@ -83,6 +87,7 @@ mdpresent deploy
 ```
 mdpresent open
 ```
+
 ---
 
 > You can very easily deploy on heroku platform too..
@@ -98,3 +103,5 @@ Visit http://github.com/goyalankit/mdpresent
 ---
 
 # Thanks!
+
+
