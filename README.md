@@ -4,21 +4,20 @@ Wrapper over mdpress for easy deployment
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'mdpresent'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
     $ gem install mdpresent
+
+## Prerequisites
+- Git
+- To deploy on heroku (optional)
+    - [Heroku toolbelt](https://toolbelt.heroku.com/)
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ mdpresent new slides
+    $ mdpresent setup heroku
+    $ mdpresent deploy
+
+TODO: Add instructions to deploy on github
 
 ## Contributing
 
